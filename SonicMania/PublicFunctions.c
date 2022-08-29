@@ -1919,6 +1919,7 @@ void InitPublicFunctions()
     ADD_PUBLIC_FUNC(Player_UpdatePhysicsState);
     ADD_PUBLIC_FUNC(Player_HandleGroundMovement);
     ADD_PUBLIC_FUNC(Player_HandleGroundRotation);
+    ADD_PUBLIC_FUNC(Player_HandleAirRotation);
     ADD_PUBLIC_FUNC(Player_HandleAirMovement);
     ADD_PUBLIC_FUNC(Player_HandleAirFriction);
     ADD_PUBLIC_FUNC(Player_Action_Jump);
@@ -1975,6 +1976,8 @@ void InitPublicFunctions()
     ADD_PUBLIC_FUNC(Player_State_Bubble);
     ADD_PUBLIC_FUNC(Player_State_WaterSlide);
     ADD_PUBLIC_FUNC(Player_State_TransportTube);
+    ADD_PUBLIC_FUNC(Player_Gravity_False);
+    ADD_PUBLIC_FUNC(Player_Gravity_True);
     ADD_PUBLIC_FUNC(Player_JumpAbility_Sonic);
     ADD_PUBLIC_FUNC(Player_JumpAbility_Tails);
     ADD_PUBLIC_FUNC(Player_JumpAbility_Knux);
@@ -2511,7 +2514,7 @@ void InitPublicFunctions()
     // Helpers/GameProgress
     ADD_PUBLIC_FUNC(GameProgress_GetNotifStringID);
     ADD_PUBLIC_FUNC(GameProgress_ShuffleBSSID);
-    ADD_PUBLIC_FUNC(GameProgress_GetGameProgress);
+    ADD_PUBLIC_FUNC(GameProgress_GetProgressRAM);
     ADD_PUBLIC_FUNC(GameProgress_GetZoneUnlocked);
     ADD_PUBLIC_FUNC(GameProgress_GetCompletionPercent);
     ADD_PUBLIC_FUNC(GameProgress_TrackGameProgress);
@@ -3181,7 +3184,7 @@ void InitPublicFunctions()
 #if MANIA_USE_PLUS
     // Menu/LevelSelect
     ADD_PUBLIC_FUNC(LevelSelect_Cheat_AllEmeralds);
-    ADD_PUBLIC_FUNC(LevelSelect_Cheat_ChangeSuperMusicFlag);
+    ADD_PUBLIC_FUNC(LevelSelect_Cheat_ToggleSuperMusic);
     ADD_PUBLIC_FUNC(LevelSelect_Cheat_MaxContinues);
     ADD_PUBLIC_FUNC(LevelSelect_Cheat_MaxControl);
     ADD_PUBLIC_FUNC(LevelSelect_Cheat_RickyMode);
@@ -3693,6 +3696,7 @@ void InitPublicFunctions()
     ADD_PUBLIC_FUNC(UIReplayCarousel_State_StartAction);
 #endif
 
+#if GAME_VERSION != VER_100
     // Menu/UIResPicker
     ADD_PUBLIC_FUNC(UIResPicker_GetDisplayInfo);
     ADD_PUBLIC_FUNC(UIResPicker_ApplySettings);
@@ -3704,6 +3708,7 @@ void InitPublicFunctions()
     ADD_PUBLIC_FUNC(UIResPicker_SetChoiceInactive);
     ADD_PUBLIC_FUNC(UIResPicker_State_HandleButtonLeave);
     ADD_PUBLIC_FUNC(UIResPicker_State_HandleButtonEnter);
+#endif
 
 #if MANIA_USE_PLUS
     // Menu/UISaveSlot
@@ -3924,6 +3929,7 @@ void InitPublicFunctions()
     ADD_PUBLIC_FUNC(UIWidgets_DrawTime);
 #endif
 
+#if GAME_VERSION != VER_100
     // Menu/UIWinSize
     ADD_PUBLIC_FUNC(UIWinSize_SetupText);
     ADD_PUBLIC_FUNC(UIWinSize_ApplySettings);
@@ -3935,6 +3941,7 @@ void InitPublicFunctions()
     ADD_PUBLIC_FUNC(UIWinSize_SetChoiceInactive);
     ADD_PUBLIC_FUNC(UIWinSize_State_HandleButtonLeave);
     ADD_PUBLIC_FUNC(UIWinSize_State_HandleButtonEnter);
+#endif
 
     // MMZ/BladePole
     ADD_PUBLIC_FUNC(BladePole_DrawSprites);

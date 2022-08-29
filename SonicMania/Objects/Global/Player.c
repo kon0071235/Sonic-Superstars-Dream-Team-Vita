@@ -672,8 +672,7 @@ void Player_Create(void *data)
         }
 
         // Setup the target score
-        int32 target = self->score1UP;
-        while (self->score1UP <= target) self->score1UP += 50000;
+        while (self->score1UP <= self->score) self->score1UP += 50000;
 
         self->collisionLayers = Zone->collisionLayers;
         self->drawFX          = FX_ROTATE | FX_FLIP;
@@ -726,7 +725,7 @@ void Player_StageLoad(void)
     // Handle Sidekick stuff setup
     Player->nextLeaderPosID = 1;
     Player->lastLeaderPosID = 0;
-#if MANIA_USE_PLUS
+#if GAME_VERSION != VER_100
     Player->disableP2KeyCheck = false;
 #endif
 
@@ -1732,7 +1731,7 @@ bool32 Player_CheckP2KeyPress(void)
         return false;
 #endif
 
-#if MANIA_USE_PLUS
+#if GAME_VERSION != VER_100
     if (self->controllerID > PLAYER_COUNT || Player->disableP2KeyCheck)
         return false;
 #else
@@ -3135,6 +3134,23 @@ void Player_HandleGroundRotation(void)
         self->rotation &= 0x1FF;
     }
 }
+void Player_HandleAirRotation(void)
+{
+    RSDK_THIS(Player);
+
+    if (self->rotation >= 0x100) {
+        if (self->rotation < 0x200)
+            self->rotation += 4;
+        else
+            self->rotation = 0;
+    }
+    else {
+        if (self->rotation > 0)
+            self->rotation -= 4;
+        else
+            self->rotation = 0;
+    }
+}
 void Player_HandleAirMovement(void)
 {
     RSDK_THIS(Player);
@@ -3151,14 +3167,7 @@ void Player_HandleAirMovement(void)
     self->collisionMode = CMODE_FLOOR;
     self->pushing       = 0;
 
-    if (self->rotation >= 0x100) {
-        if (self->rotation < 0x200)
-            self->rotation += 4;
-    }
-    else if (self->rotation > 0)
-        self->rotation -= 4;
-    else
-        self->rotation = 0;
+    Player_HandleAirRotation();
 }
 void Player_HandleAirFriction(void)
 {
@@ -5206,14 +5215,16 @@ void Player_SpawnMightyHammerdropDust(int32 speed, Hitbox *hitbox)
         dust->scale.y = 256;
     }
 
-    if (!self->angle)
+    if (!self->angle) {
         RSDK.ObjectTileGrip(dust, dust->collisionLayers, CMODE_FLOOR, dust->collisionPlane, 0, 0, 4);
+    }
+    else {
+        for (int32 i = 0; i < 0x10; ++i) {
+            if (RSDK.ObjectTileGrip(dust, dust->collisionLayers, CMODE_FLOOR, dust->collisionPlane, 0, 0, 8))
+                break;
 
-    for (int32 i = 0; i < 0x10; ++i) {
-        if (RSDK.ObjectTileGrip(dust, dust->collisionLayers, CMODE_FLOOR, dust->collisionPlane, 0, 0, 8))
-            break;
-
-        dust->position.y += 0x80000;
+            dust->position.y += 0x80000;
+        }
     }
 }
 bool32 Player_CheckMightyUnspin(EntityPlayer *player, int32 bounceDistance, bool32 checkHammerDrop, int32 *uncurlTimer)
