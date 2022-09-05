@@ -523,8 +523,9 @@ void Music_FinishJingle(EntityMusic *entity)
                 }
             }
 
-            Music_Stop();
             if (trackPtr) { // another track is on the music stack still
+                Music_Stop();
+
                 if (trackPtr->trackID == Music->activeTrack) {
                     trackPtr->trackStartPos = 0;
                 }
@@ -543,6 +544,8 @@ void Music_FinishJingle(EntityMusic *entity)
                 }
             }
             else if (Music->nextTrack > TRACK_NONE) { // next track is queued
+                Music_Stop();
+
                 Music->activeTrack = Music->nextTrack;
                 Music->nextTrack   = TRACK_NONE;
 
@@ -786,7 +789,8 @@ void Music_State_1UPJingle(void)
         }
 
         Music->playing1UPTrack = false;
-        Music->channelID       = RSDK.PlayStream(Music->trackNames[Music->activeTrack], 0, 0, Music->trackLoops[Music->activeTrack], true);
+        Music->channelID =
+            RSDK.PlayStream(Music->trackNames[Music->activeTrack], 0, Music->trackStartPos, Music->trackLoops[Music->activeTrack], true);
 
         if (Music->trackStartPos)
             RSDK.SetChannelAttributes(Music->channelID, self->volume, 0.0, 1.0);
