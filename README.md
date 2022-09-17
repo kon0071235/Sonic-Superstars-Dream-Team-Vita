@@ -1,3 +1,13 @@
+# Vita Install Directions
+- Install the VPK
+- Make the folders `ux0:data/Mania` and `ux0:data/Mania/mods`
+- Copy `Game.suprx` and `Settings.ini` to `ux0:data/Mania`
+- Copy `modconfig.ini` to `ux0:data/Mania/mods`
+- Launch Game
+
+## Vita Mod Installation Directions and Essential Mods
+- Check out the instructions and provided mods here: https://github.com/SonicMastr/RSDKv5-Example-Mods/releases
+
 # **SUPPORT THE OFFICIAL RELEASE OF SONIC MANIA (PLUS)**
 + Without assets from the official releases, this decompilation will not run.
 
