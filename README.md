@@ -1,3 +1,4 @@
+## LiveArea Assets by [Danhanado](https://twitter.com/Danhanad0)
 # Vita Install Directions
 - Install the VPK
 - Make the folders `ux0:data/Mania` and `ux0:data/Mania/mods`
