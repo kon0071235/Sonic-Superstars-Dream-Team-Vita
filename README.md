@@ -8,6 +8,7 @@
 
 ## Vita Mod Installation Directions and Essential Mods
 - Check out the instructions and provided mods here: https://github.com/SonicMastr/RSDKv5-Example-Mods/releases
+- If you would want to boost Special Stage performance, try this mod: https://gamebanana.com/mods/408483
 
 ## Vita forced Integer Scaling Mode (letterbox)
 - In `Settings.ini`, hange the line `forceIntegerScaling=0` to `forceIntegerScaling=1`
