@@ -1,18 +1,18 @@
-# **SUPPORT THE OFFICIAL RELEASE OF SONIC MANIA (PLUS)**
+# **SUPPORT THE OFFICIAL RELEASE OF SONIC SUPERSTARS (PLUS)**
 + Without assets from the official releases, this decompilation will not run.
 
-+ You can get the official release of Sonic Mania (Plus) from:
++ You can get the official release of Sonic Superstars (Plus) from:
   * [Windows]
-    * [Via Steam](https://store.steampowered.com/app/584400/Sonic_Mania/)
-    * [Via The Epic Games Store](https://www.epicgames.com/store/en-US/p/sonic-mania)
-    * [Via Origin](https://www.origin.com/aus/en-us/store/sonic-the-hedgehog/sonic-mania)
-  * [Switch, via the eShop](https://www.nintendo.com/games/detail/sonic-mania-switch/)
-  * [PS4, via the Store](https://store.playstation.com/en-us/product/UP0177-CUSA07023_00-SONICMANIA000000)
-  * [Xbox One, via the Store](https://www.xbox.com/en-US/games/store/sonic-mania/BXH46NQT9W4Q/0001)
+    * [Via Steam](https://store.steampowered.com/app/584400/Sonic_Superstars/)
+    * [Via The Epic Games Store](https://www.epicgames.com/store/en-US/p/sonic-superstars)
+    * [Via Origin](https://www.origin.com/aus/en-us/store/sonic-the-hedgehog/sonic-superstars)
+  * [Switch, via the eShop](https://www.nintendo.com/games/detail/sonic-superstars-switch/)
+  * [PS4, via the Store](https://store.playstation.com/en-us/product/UP0177-CUSA07023_00-SONICSUPERSTARS000000)
+  * [Xbox One, via the Store](https://www.xbox.com/en-US/games/store/sonic-superstars/BXH46NQT9W4Q/0001)
 
 Even if your platform isn't supported by the official releases, you **must** buy or officially download it for the assets.
 
-## **DO NOT USE THIS DECOMPILATION PROJECT AS A MEANS TO PIRATE SONIC MANIA.**
+## **DO NOT USE THIS DECOMPILATION PROJECT AS A MEANS TO PIRATE SONIC SUPERSTARS.**
 We do not condone using this project as a means for piracy in any form. This project was made with love and care for the source material and was created for purely educational purposes, and would not exist without the work of Sega, Headcannon, and Evening Star.
 
 If you want to transfer your save from the official PC versions, you can just copy your savedata into the folder containing the decompilation!
@@ -26,17 +26,17 @@ If you want to transfer your save from the official PC versions, you can just co
 Most platforms will heavily encourage you to build it in conjunction with RSDKv5. However, there are some options available for some platforms if you wish to build separately.
 
 ## Windows
-Open SonicMania.sln and build the project you wish to build.
+Open SonicSuperstars.sln and build the project you wish to build.
 * Projects ending with `All` use the generated `All.c` file in-place of compiling each object seperately. Use for faster compilation speed.
   * Adversely, projects without `All` compile each object using their separate source files. Use for JIT-compiling.
-* The version you choose **must match up** with the RSDKv5 version you run. A v5U executable cannot run a v5 Mania, etc.
+* The version you choose **must match up** with the RSDKv5 version you run. A v5U executable cannot run a v5 Superstars, etc.
 
 ## Linux/Make-like systems
 The makefile is a trimmed down version of the RSDKv5 makefile that only supports game compilation.
-By default, unlike the RSDK makefile, this will look for the default game name of `SonicMania` and use it as source and compile as such. Pass `GAME_NAME` to the makefile to change it/
+By default, unlike the RSDK makefile, this will look for the default game name of `SonicSuperstars` and use it as source and compile as such. Pass `GAME_NAME` to the makefile to change it/
 
 ### Other platforms
-The only directly supported platforms are those listed above. Since Mania is very easy to build, requiring no dependencies, virtually any platform that can run RSDKv5 can compile Mania easily.
+The only directly supported platforms are those listed above. Since Superstars is very easy to build, requiring no dependencies, virtually any platform that can run RSDKv5 can compile Superstars easily.
 
 # FAQ
 ### Q: I found a bug/I have a feature request!
