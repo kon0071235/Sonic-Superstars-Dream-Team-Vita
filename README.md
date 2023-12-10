@@ -20,7 +20,7 @@ If you want to transfer your save from the official PC versions, you can just co
 # Additional Tweaks
 * Added a built-in mod loader and API calls to enable a much smoother modding experience.
 * Added support for targeting RSDKv5U rather than standalone RSDKv5
-* Added all content from all released versions of the game. Including: 1.00 (initial release), 1.05 (Switch Update)
+* Added all content from all released versions of the game. Including: 1.00 (initial release), 1.01 (Update) 1.05 (Switch Update)
 
 # How to Build
 Most platforms will heavily encourage you to build it in conjunction with RSDKv5. However, there are some options available for some platforms if you wish to build separately.
