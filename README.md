@@ -13,7 +13,7 @@
 Even if your platform isn't supported by the official releases, you **must** buy or officially download it for the assets.
 
 ## **DO NOT USE THIS DECOMPILATION PROJECT AS A MEANS TO PIRATE SONIC SUPERSTARS.**
-We do not condone using this project as a means for piracy in any form. This project was made with love and care for the source material and was created for purely educational purposes, and would not exist without the work of Sega, Headcannon, and Evening Star.
+We do not condone using this project as a means for piracy in any form. This project was made with love and care for the source material and was created for purely educational purposes, and would not exist without the work of Sega, Arzest, and Sonic Team.
 
 If you want to transfer your save from the official PC versions, you can just copy your savedata into the folder containing the decompilation!
 
