@@ -19,24 +19,24 @@ If you want to transfer your save from the official PC versions, you can just co
 
 # Additional Tweaks
 * Added a built-in mod loader and API calls to enable a much smoother modding experience.
-* Added support for targeting RSDKv5U rather than standalone RSDKv5
+* Added support for targeting Unityv2021 rather than standalone Unityv2021
 * Added all content from all released versions of the game. Including: 1.00 (initial release), 1.05 (Update)
 
 # How to Build
-Most platforms will heavily encourage you to build it in conjunction with RSDKv5. However, there are some options available for some platforms if you wish to build separately.
+Most platforms will heavily encourage you to build it in conjunction with Unityv2021. However, there are some options available for some platforms if you wish to build separately.
 
 ## Windows
 Open SonicSuperstars.sln and build the project you wish to build.
 * Projects ending with `All` use the generated `All.c` file in-place of compiling each object seperately. Use for faster compilation speed.
   * Adversely, projects without `All` compile each object using their separate source files. Use for JIT-compiling.
-* The version you choose **must match up** with the RSDKv5 version you run. A v5U executable cannot run a v5 Superstars, etc.
+* The version you choose **must match up** with the Unityv2021 version you run. A v5U executable cannot run a v5 Superstars, etc.
 
 ## Linux/Make-like systems
-The makefile is a trimmed down version of the RSDKv5 makefile that only supports game compilation.
-By default, unlike the RSDK makefile, this will look for the default game name of `SonicSuperstars` and use it as source and compile as such. Pass `GAME_NAME` to the makefile to change it/
+The makefile is a trimmed down version of the Unityv2021 makefile that only supports game compilation.
+By default, unlike the Unity makefile, this will look for the default game name of `SonicSuperstars` and use it as source and compile as such. Pass `GAME_NAME` to the makefile to change it/
 
 ### Other platforms
-The only directly supported platforms are those listed above. Since Superstars is very easy to build, requiring no dependencies, virtually any platform that can run RSDKv5 can compile Superstars easily.
+The only directly supported platforms are those listed above. Since Superstars is very easy to build, requiring no dependencies, virtually any platform that can run Unityv2021 can compile Superstars easily.
 
 # FAQ
 ### Q: I found a bug/I have a feature request!
