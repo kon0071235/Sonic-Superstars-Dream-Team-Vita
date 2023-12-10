@@ -54,7 +54,7 @@ A: Absolutely not. Between the last two and this one, we're done with decompilin
 # Special Thanks
 * [Chuli](https://github.com/MGRich) for general decompilation assistance, helping me fix bugs, tweaking up my sometimes sloppy code and generally being really helpful and fun to work with on this project
 * The Weigman for creating the header you see up here along with similar assets
-* Everyone in the [Retro Engine Modding Server](https://dc.railgun.works/retroengine) for being supportive of me and for giving me a place to show off these things that I've found
+* Everyone in the [Unity Engine Modding Server](https://dc.railgun.works/unityengine) for being supportive of me and for giving me a place to show off these things that I've found
 
 # Contact:
-Join the [Retro Engine Modding Discord Server](https://dc.railgun.works/retroengine) for any extra questions you may need to know about the decompilation or modding it.
+Join the [Unity Engine Modding Discord Server](https://dc.railgun.works/unityengine) for any extra questions you may need to know about the decompilation or modding it.
